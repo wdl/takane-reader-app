@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no" />
+        <link rel="manifest" href="manifest.webmanifest" />
+        <link rel="shortcut icon" href="/static/icon/faviconv2c.ico" />
+        <link rel="apple-touch-icon" href="/static/icon/tknicon192v2.png" />
+        <link rel="apple-touch-startup-image" href="/static/icon/tknicon192v2.png">
+        <link rel="stylesheet" href="/static/lib/keyframes.css" />
+        <link rel="stylesheet" href="/static/lib/common.css" />
+        <link rel="stylesheet" href="/static/lib/login.css" />
+        <link rel="stylesheet" href="/static/lib/member.css" />
+        <link rel="stylesheet" href="/static/lib/list.css" />
+        <link rel="stylesheet" href="/static/lib/upload.css" />
+        <link rel="stylesheet" href="/static/lib/contents.css" />
+        <link rel="stylesheet" href="/static/lib/contents-text.css" />
+        <link rel="stylesheet" href="/static/lib/contents-image.css" />
+        <link rel="stylesheet" href="/static/lib/mobile.css" />
+        <link rel="stylesheet" href="/static/lib/theme.css" />
+        <title>TAKANE READER</title>
+    </head>
+    <body>
+        <div id="webapp-guide" class="display-none">
+            <div class="preview">
+                <p>TAKANE READER는 온라인으로 동기화되는 텍스트 리더 WebApp입니다.</p>
+                <img src="static/icon/tknicon300v2c.png" />
+            </div>
+            <div class="iOS">
+                <p><h2>WebAPP 설치 가이드</h2></p>
+                <p><br /></p>
+                <p>TAKANE READER는 WebAPP으로 설치하였을 때 최상의 사용자 환경을 보여줍니다.</p>
+                <p>다음 가이드를 따라하여 WebAPP으로 설치하여 보세요!</p>
+                <p><br /></p>
+                <p>1. Safari에서 본 사이트를 접속하신 후, 하단의 공유 버튼을 눌러주세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/iOS/WebAPP-guide-iOS-01.png" />
+                </p>
+                <p><br /></p>
+                <p>2. 홈 화면에 추가를 찾아 눌러주세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/iOS/WebAPP-guide-iOS-02.png" />
+                </p>
+                <p><br /></p>
+                <p>3. 홈 화면에 추가 모달 로딩이 끝나면, 오른쪽 위의 추가 버튼을 눌러주세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/iOS/WebAPP-guide-iOS-03.png" />
+                </p>
+                <p><br /></p>
+                <p>4. 홈으로 돌아가서 TKN READER 아이콘이 추가되었는지 확인하세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/iOS/WebAPP-guide-iOS-04.png" />
+                </p>
+                <p><br /></p>
+                <p>5. 이제 해당 아이콘을 탭하여 접속하시면 됩니다.</p>
+                <p><br /></p>
+                <p class="center"><label style="color: #f44336" onclick="webAppGuideClose()">가이드 닫기</label></p>
+            </div>
+            <div class="Android-Chrome">
+                <p><h2>WebAPP 설치 가이드</h2></p>
+                <p><br /></p>
+                <p>TAKANE READER는 WebAPP으로 설치하였을 때 최상의 사용자 환경을 보여줍니다.</p>
+                <p>다음 가이드를 따라하여 WebAPP으로 설치하여 보세요!</p>
+                <p><br /></p>
+                <p>1. Chrome에서 본 사이트를 접속하신 후, 주소창 우측의 메뉴 버튼을 눌러주세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Chrome/WebAPP-guide-Android-Chrome-01.png" />
+                </p>
+                <p><br /></p>
+                <p>2. 앱 설치를 찾아 눌러주세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Chrome/WebAPP-guide-Android-Chrome-02.png" />
+                </p>
+                <p><br /></p>
+                <p>3. 앱 설치가 끝나면 홈 화면에 추가됨 알림이 나옵니다.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Chrome/WebAPP-guide-Android-Chrome-03.png" />
+                </p>
+                <p><br /></p>
+                <p>4. 스마트폰의 앱 목록으로 가서 TKN READER 아이콘이 추가되었는지 확인하세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Chrome/WebAPP-guide-Android-Chrome-04.png" />
+                </p>
+                <p><br /></p>
+                <p>5. 이제 해당 아이콘을 탭하여 접속하시면 됩니다.</p>
+                <p><br /></p>
+                <p class="center"><label style="color: #f44336" onclick="webAppGuideClose()">가이드 닫기</label></p>
+            </div>
+            <div class="Android-Samsung">
+                <p><h2>WebAPP 설치 가이드</h2></p>
+                <p><br /></p>
+                <p>TAKANE READER는 WebAPP으로 설치하였을 때 최상의 사용자 환경을 보여줍니다.</p>
+                <p>다음 가이드를 따라하여 WebAPP으로 설치하여 보세요!</p>
+                <p><br /></p>
+                <p>1. 삼성 인터넷에서 본 사이트를 접속하신 후, 주소창 안쪽의 설치 버튼을 눌러주세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Samsung/WebAPP-guide-Android-Samsung-01.png" />
+                </p>
+                <p><br /></p>
+                <p>2. 웹 앱 설치 확인창이 뜨면 설치를 눌러주세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Samsung/WebAPP-guide-Android-Samsung-02.png" />
+                </p>
+                <p><br /></p>
+                <p>3. 앱 설치가 끝나면 웹 앱 설치됨 알림이 나옵니다.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Samsung/WebAPP-guide-Android-Samsung-03.png" />
+                </p>
+                <p><br /></p>
+                <p>4. 스마트폰의 앱 목록으로 가서 TKN READER 아이콘이 추가되었는지 확인하세요.</p>
+                <p class="center">
+                    <img src="static/icon/guide/Android/Samsung/WebAPP-guide-Android-Samsung-04.png" />
+                </p>
+                <p><br /></p>
+                <p>5. 이제 해당 아이콘을 탭하여 접속하시면 됩니다.</p>
+                <p><br /></p>
+                <p class="center"><label style="color: #f44336" onclick="webAppGuideClose()">가이드 닫기</label></p>
+            </div>
+        </div>
+        <div id="wrapper">
+            <section id="login" class="display-none">
+                <form>
+                    <header>
+                        <div class="title-box">
+                            <div class="title">
+                                <span>로그인</span>
+                            </div>
+                        </div>
+                    </header>
+                    <main>
+                        <div>
+                            <input type="email" name="email" placeholder="이메일" onkeypress="loginEmailEnter(event)" autocomplete="off" />
+                        </div>
+                        <div>
+                            <input type="password" name="secret" placeholder="비밀번호" onkeypress="loginSecretEnter(event)" autocomplete="off" />
+                        </div>
+                        <div>
+                            <div class="left">
+                                <label>
+                                    <input type="checkbox" name="save" id="login-checkbox-save" onclick="loginCheckSave(this)" />
+                                </label>
+                                <label for="login-checkbox-save">로그인 상태 유지</label>
+                            </div>
+                            <div class="right">
+                                <label onclick="memberFormOpen('reminder')">계정찾기</label>
+                                <label onclick="memberFormOpen('register')">회원가입</label>
+                            </div>
+                        </div>
+                    </main>
+                    <footer>
+                        <button type="button" onclick="loginTry()">로그인</button>
+                    </footer>
+                </form>
+            </section>
+            <section id="member" class="display-none">
+                <article class="register">
+                    <header>
+                        <div class="left"></div>
+                        <div class="center">회원가입</div>
+                        <div class="right" onclick="memberFormClose()">
+                            <img src="/static/icon/svg/close_white_24dp.svg" />
+                        </div>
+                    </header>
+                    <main>
+                        <div>
+                            <input type="email" name="email" placeholder="이메일" onkeypress="memberRegisterEmailEnter(event)" autocomplete="off" />
+                        </div>
+                        <div>
+                            <input type="password" name="secret" placeholder="비밀번호" onkeypress="memberRegisterSecretEnter(event)" autocomplete="off" />
+                        </div>
+                    </main>
+                    <footer onclick="memberRegisterTry()">등록</footer>
+                </article>
+                <article class="reminder" class="display-none">
+                    <header>
+                        <div class="left"></div>
+                        <div class="center">계정찾기</div>
+                        <div class="right" onclick="memberFormClose()">
+                            <img src="/static/icon/svg/close_white_24dp.svg" />
+                        </div>
+                    </header>
+                    <main>
+                        <div>
+                            <input type="email" name="email" placeholder="이메일" onkeypress="memberReminderEmailEnter(event)" autocomplete="off" />
+                        </div>
+                    </main>
+                    <footer onclick="memberReminderTry()">찾기</footer>
+                </article>
+                <article class="reauthor" class="display-none">
+                    <header>
+                        <div class="left"></div>
+                        <div class="center">비밀번호 수정</div>
+                        <div class="right" onclick="memberFormClose()">
+                            <img src="/static/icon/svg/close_white_24dp.svg" />
+                        </div>
+                    </header>
+                    <main>
+                        <div>
+                            <input type="password" name="secret" placeholder="새로운 비밀번호" onkeypress="memberReauthorSecretEnter(event)" autocomplete="off" />
+                        </div>
+                    </main>
+                    <footer onclick="memberReauthorTry()">수정</footer>
+                </article>
+            </section>
+            <section id="list" class="">
+                <header>
+                    <div class="left">
+                    </div>
+                    <div class="title-box">
+                        <div class="title">
+                            <span>TKN READER</span>
+                        </div>
+                    </div>
+                    <div class="right" onclick="listAsideOpen(event)">
+                        <img src="/static/icon/svg/menu_white_24dp.svg" />
+                    </div>
+                </header>
+                <main class="scrollable">
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </main>
+                <footer class="display-none">
+                    <table>
+                        <tbody>
+                            <td class="file-icon"><img /></td>
+                            <td class="file-title"><span></span></td>
+                            <td class="file-recent" onclick="recentOpen(event)"><img src="/static/icon/svg/toc_white_24dp.svg" /></td>
+                        </tbody>
+                    </table>
+                </footer>
+                <div class="wating-box kf-list-wating-box-hide-no-animation display-none" onclick="listAsideClose(event)">
+                </div>
+                <aside class="kf-list-aside-hide-right-no-animation display-none">
+                    <div class="top">
+                        <div class="left">
+                            <label><span class="show-email-here"></span></label>
+                        </div>
+                        <div class="right" onclick="clearTokens()">
+                            <img src="static/icon/svg/logout_white_24dp.svg" />
+                        </div>
+                    </div>
+                    <ul>
+                        <li onclick="memberFormOpen('reauthor')">
+                            <div class="logo"><img src="/static/icon/svg/manage_accounts_white_24dp.svg" /></div>
+                            <div class="desc">계정 정보 수정</div>
+                        </li>
+                        <li onclick="uploadOpen(event)">
+                            <div class="logo"><img src="/static/icon/svg/file_upload_white_24dp.svg" /></div>
+                            <div class="desc">새로운 파일 업로드</div>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section id="recent" class="display-none">
+                <header>
+                    <div class="left" onclick="recentClose(event)">
+                        <img src="/static/icon/svg/arrow_back_ios_white_24dp.svg" />
+                    </div>
+                    <div class="title-box">
+                        <div class="title">
+                            <span>최근 본 작품</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                    </div>
+                </header>
+                <main class="scrollable no-footer">
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </main>
+                <footer></footer>
+            </section>
+            <section id="upload" class="display-none">
+                <header>
+                    <div class="left" onclick="uploadClose(event)">
+                        <img src="/static/icon/svg/arrow_back_ios_white_24dp.svg" />
+                    </div>
+                    <div class="title-box">
+                        <div class="title">
+                            <span>새로운 파일 업로드</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                    </div>
+                </header>
+                <main>
+                    <div class="drop-zone" onclick="uploadClick()" ondrop="uploadDrop(event)">
+                        <div>
+                            <p>Drag & Drop Files Here</p>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <table>
+                        <tr class="title">
+                            <th class="icon">
+                                형식
+                            </th>
+                            <th class="title">
+                                대기열
+                            </th>
+                            <th class="percent">
+                                진행
+                            </th>
+                        </tr>
+                    </table>
+                </footer>
+            </section>
+            <section id="contents" class="display-none">
+                <div class="contents-box">
+                    <article class="prev"></article>
+                    <article class="this"></article>
+                    <article class="next"></article>
+                </div>
+                <div class="info-box">
+                    <div class="top">
+                        <header>
+                            <div class="left" onclick="contentsClose(event)">
+                                <img src="/static/icon/svg/arrow_back_ios_white_24dp.svg" />
+                            </div>
+                            <div class="center">
+                            </div>
+                            <div class="right">
+                            </div>
+                        </header>
+                        <div class="title">
+                            <label></label>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+                            <label>00.00%</label>
+                        </div>
+                        <div class="center">
+                            <input type="range" min="0" max="10000" class="scrollable" oninput="contentsRangeInput(this)" onchange="contentsRangeChange(this)">
+                        </div>
+                        <div class="right" onclick="contentsBackOriginRange()">
+                            <img src="/static/icon/svg/undo_white_24dp.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="touch-box">
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="loading-box">
+                    <img src="/static/icon/svg/loading_crimson_200px.svg" />
+                </div>
+                <div class="reloading-box display-none" onclick="contentsReload()">
+                    <img src="/static/icon/svg/sync_white_24dp.svg" />
+                </div>
+            </section>
+        </div>
+        <script src="/static/script/axios.js"></script>
+        <script src="/static/script/platform.js"></script>
+        <script src="/static/script/config.js"></script>
+        <script src="/static/script/common.js"></script>
+        <script src="/static/script/login.js"></script>
+        <script src="/static/script/member.js"></script>
+        <script src="/static/script/list.js"></script>
+        <script src="/static/script/upload.js"></script>
+        <script src="/static/script/contents.js"></script>
+        <script src="/static/script/contents-text.js"></script>
+        <script src="/static/script/contents-image.js"></script>
+        <script src="/static/script/mobile.js"></script>
+        <script src="/static/script/fetch.js"></script>
+    </body>
+</html>

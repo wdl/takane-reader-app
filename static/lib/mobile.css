@@ -1,0 +1,56 @@
+@media only screen and (pointer: coarse) {
+    html, body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="button"],
+    input[type="range"] {
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    #wrapper {
+        height: 100%;
+        margin: 0;
+        max-width: 100%;
+    }
+    
+    #list > main > table > tbody > tr:hover,
+    #recent > main > table > tbody > tr:hover {
+        background-color: inherit !important;
+        color: inherit !important;
+        transition-duration: 0s !important;
+    }
+
+    #list > main > table > tbody > tr > td.file-icon,
+    #list > main > table > tbody > tr > td.file-percent,
+    #recent > main > table > tbody > tr > td.file-icon,
+    #recent > main > table > tbody > tr > td.file-percent {
+        padding: 10px;
+    }
+
+    #list > footer > table > tbody > tr > td.file-icon {
+        padding: 15px 10px;
+    }
+    #list > footer > table > tbody > tr > td.file-recent {
+        padding: 10px 10px;
+    }
+
+    #contents > .touch-box > div:hover {
+        background-image: none !important;
+        opacity: 0 !important;
+        transition-duration: 0s !important;
+    }
+
+    #upload > footer > table > tbody > tr > th.icon,
+    #upload > footer > table > tbody > tr > td.icon {
+        padding: 10px 0;
+    }
+    #upload > footer > table > tbody > tr > th.percent,
+    #upload > footer > table > tbody > tr > td.percent {
+        padding: 0;
+    }
+}

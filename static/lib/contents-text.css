@@ -1,0 +1,19 @@
+#contents.text {
+    font-size: 14pt;
+}
+
+#contents.text > .contents-box {
+    width: calc(100% - 20px - env(safe-area-inset-left) - 20px - env(safe-area-inset-right));
+    height: calc(100% - 20px - env(safe-area-inset-top) - 20px - env(safe-area-inset-bottom));
+    margin-top: calc(20px + env(safe-area-inset-top));
+    margin-right: calc(20px + env(safe-area-inset-right));
+    margin-bottom: calc(20px + env(safe-area-inset-bottom));
+    margin-left: calc(20px + env(safe-area-inset-left));
+    overflow: hidden;
+    word-break: break-all;
+    line-break: anywhere;
+}
+
+#contents.text > .contents-box > article {
+    line-height: 1.6em;
+}

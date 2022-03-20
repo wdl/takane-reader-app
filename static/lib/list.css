@@ -1,0 +1,312 @@
+#list > header,
+#recent > header {
+    background-color: rgb(60, 0, 19);
+    border-bottom: 1px solid rgb(212, 212, 212, 0.2);
+    height: 70px;
+    padding-top: env(safe-area-inset-top);
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+#recent > header > .left {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 70px;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+}
+
+#list > header > .left > img,
+#recent > header > .left > img {
+    width: 30px;
+}
+
+#list > header > .right,
+#recent > header > .right {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+}
+
+#list > header > .right > img {
+    cursor: pointer;
+    width: 30px;
+}
+
+#list > main,
+#recent > main { 
+    height: calc(100% - 70px - env(safe-area-inset-top) - 1px - 60px - env(safe-area-inset-bottom) - 1px);
+    margin-top: calc(70px + env(safe-area-inset-top) + 1px);
+    margin-bottom: calc(60px + env(safe-area-inset-bottom) + 1px);
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+}
+
+#list > main.no-footer,
+#recent > main.no-footer {
+    height: calc(100% - env(safe-area-inset-bottom) - 70px - env(safe-area-inset-top) - 1px);
+    margin-bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+#list > main > table,
+#recent > main > table {
+    border-collapse: collapse;
+    max-height: 100%;
+    width: 100%;
+}
+
+#list > main > table > tbody,
+#recent > main > table > tbody {
+    width: 100%;
+}
+
+#list > main > table > tbody > tr,
+#recent > main > table > tbody > tr {
+    cursor: pointer;
+}
+
+#list > main > table > tbody > tr:hover,
+#recent > main > table > tbody > tr:hover {
+    background-color: rgb(86, 0, 27);
+    color: rgb(225, 225, 225);
+    transition-duration: 0.3s;
+}
+
+#list > main > table > tbody > tr > td,
+#recent > main > table > tbody > tr > td {
+    border-bottom: 1px solid rgba(212, 212, 212, 0.1);
+}
+
+#list > main > table > tbody > tr > td.file-icon,
+#recent > main > table > tbody > tr > td.file-icon {
+    padding: 10px 20px;
+    width: 37px;
+}
+
+#list > main > table > tbody > tr > td.file-icon > img,
+#recent > main > table > tbody > tr > td.file-icon > img {
+    display: block;
+    height: 40px;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+#list > main > table > tbody > tr > td.file-title,
+#recent > main > table > tbody > tr > td.file-title {
+    box-sizing: border-box;
+    padding: 10px 0;
+    word-break: break-all;
+    line-break: anywhere;
+    word-wrap: break-word;
+}
+
+#list > main > table > tbody > tr > td.file-percent,
+#recent > main > table > tbody > tr > td.file-percent  {
+    box-sizing: content-box;
+    clear: left;
+    text-align: right;
+    padding: 10px 20px;
+    width: 60px;
+}
+
+#list > main > table > tbody > tr > td.file-percent > label,
+#recent > main > table > tbody > tr > td.file-percent > label {
+    display: block;
+    font-size: 9pt;
+    margin-bottom: 5px;
+}
+
+#list > main > table > tbody > tr > td.file-percent > progress,
+#recent > main > table > tbody > tr > td.file-percent > progress {
+    display: block;
+    height: 5px;
+    width: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2.5px;
+}
+#list > main > table > tbody > tr > td.file-percent > progress::-moz-progress-bar,
+#recent > main > table > tbody > tr > td.file-percent > progress::-moz-progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2.5px;
+}
+#list > main > table > tbody > tr > td.file-percent > progress::-webkit-progress-bar,
+#recent > main > table > tbody > tr > td.file-percent > progress::-webkit-progress-bar {
+    background: transparent;
+    border-radius: 2.5px;
+}
+#list > main > table > tbody > tr > td.file-percent > progress::-webkit-progress-value,
+#recent > main > table > tbody > tr > td.file-percent > progress::-webkit-progress-value {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2.5px;
+}
+
+#list > footer {
+    background-color: rgb(60, 0, 19);
+    border-top: 1px solid rgb(212, 212, 212, 0.1);
+    bottom: 0;
+    cursor: pointer;
+    height: calc(60px + env(safe-area-inset-bottom));
+    position: absolute;
+    width: 100%;
+}
+
+#list > footer > table {
+    width: 100%;
+}
+
+#list > footer > table > tbody > tr > td.file-icon {
+    padding: 15px 20px;
+    width: 37px;
+}
+
+#list > footer > table > tbody > tr > td.file-icon > img {
+    display: block;
+    height: 30px;
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering: -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+#list > footer > table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#list > footer > table > tbody {
+    padding: 0;
+    margin: 0;
+}
+
+#list > footer > table > tbody > tr > td.file-title {
+    box-sizing: border-box;
+}
+
+
+#list > footer > table > tbody > tr > td.file-title > span {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#list > footer > table > tbody > tr > td.file-recent {
+    padding: 10px 20px;
+    text-align: right;
+    width: 40px;
+}
+
+#list > footer > table > tbody > tr > td.file-recent > img {
+    display: block;
+    margin: auto 0 auto auto;
+    height: 40px;
+}
+
+#list > .wating-box {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition-duration: 500ms;
+}
+
+#list > aside {
+    background-color: rgb(73, 0, 23);
+    box-shadow: -4px 0px 4px 0 #30000F;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: min(300px, 80%);
+}
+
+#list > aside > .top {
+    background-color: rgb(60, 0, 19);
+    padding-top: env(safe-area-inset-top);
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #30000F;
+}
+
+#list > aside > .top > .left {
+    width: calc(100% - 50px - 20px);
+    padding: 22.5px 10px;
+}
+
+#list > aside > .top > .left > label {
+    font-size: 13pt;
+}
+
+#list > aside > .top > .right {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#list > aside > .top > .right > img {
+    width: 30px;
+    height: 30px;
+}
+
+#list > aside > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#list > aside > ul > li {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #30000F;
+}
+#list > aside > ul > li:hover {
+    background-color: rgb(86, 0, 27);
+    cursor: pointer;
+}
+
+#list > aside > ul > li > div {
+    float: left;
+}
+
+#list > aside > ul > li > div.logo {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+#list > aside > ul > li > div.logo > img {
+    width: 30px;
+    height: 30px;
+}
+
+#list > aside > ul > li > div.desc {
+    width: calc(100% - 50px);
+    font-size: 13pt;
+    padding: 12.5px 0;
+}

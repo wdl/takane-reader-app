@@ -1,0 +1,114 @@
+#login > form {
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+
+#login > form > header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 25px;
+    padding: 18px 0;
+    text-align: center;
+}
+
+#login > form > header > span {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#login > form > main {
+    padding: 20px 20px 10px 20px;
+}
+
+#login > form > main > div {
+    background-color: rgb(60, 0, 19);
+    border: 1px solid rgb(86, 0, 27);
+    border-bottom: none;
+    height: 49px;
+    z-index: 3100;
+}
+
+#login > form > main > div:last-child {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgb(86, 0, 27);
+    height: 18px;
+    padding: 8px 10px 10px 10px;
+}
+
+#login > form > main > div > input {
+    background-color: rgb(60, 0, 19);
+    border: none;
+    border-radius: none;
+    box-sizing: border-box;
+    color: rgb(212, 212, 212);
+    font-size: 13pt;
+    font-family: inherit;
+    outline: 1px solid rgb(86, 0, 27);
+    outline-offset: 0;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+    z-index: 3110;
+}
+
+#login > form > main > div > input:focus {
+    outline: 2px solid rgb(138, 0, 43);
+    z-index: 3120;
+}
+
+#login > form > main > div:last-child > div {
+    width: 50%;
+    height: 100%;
+}
+
+#login > form > main > div:last-child > div.left {
+    float: left;
+    text-align: left;
+}
+
+#login > form > main > div:last-child > div.right {
+    float: right;
+    text-align: right;
+}
+
+#login > form > main > div:last-child > div > label {
+    display: inline-block;
+    color: rgba(204, 204, 204, 0.5);
+    cursor: pointer;
+    font-size: 10pt;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#login > form > main > div:last-child > div.right > label + label {
+    margin-left: 10px;
+}
+
+#login > form > main > div:last-child > div > label:hover,
+#login > form > main > div:last-child > div > label:active {
+    font-weight: bold;
+    color: rgb(138, 0, 43);
+}
+
+#login > form > footer {
+    padding: 0 20px 20px 20px;
+}
+
+#login > form > footer > button {
+    background-color: rgb(138, 0, 43);
+    border: none;
+    border-radius: 5px;
+    color: rgb(212, 212, 212);
+    font-size: 13pt;
+    font-family: inherit;
+    font-weight: bold;
+    outline: none;
+    padding: 12px 5px;
+    width: 100%;
+}
+
+#login > form > footer > button:hover,
+#login > form > footer > button:active {
+    background-color: rgb(112, 0, 35);
+    cursor: pointer;
+}

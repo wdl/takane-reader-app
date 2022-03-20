@@ -1,0 +1,90 @@
+#member {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#member > article {
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid rgb(60, 0, 19);
+    background-color: rgb(73, 0, 23);
+    border-radius: 10px;
+}
+
+#member > article > * {
+    text-align: center;
+}
+
+#member > article > header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.1);
+}
+
+#member > article > header > div {
+    height: 30px;
+    float: left;
+}
+
+#member > article > header > .left {
+    width: 30px;
+    padding: 10px;
+}
+
+#member > article > header > .center {
+    width: calc(100% - 120px);
+    text-align: center;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+#member > article > header > .right {
+    width: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#member > article > header > .right > img {
+    width: 30px;
+    height: 30px;
+}
+
+#member > article > main {
+    padding: 10px;
+}
+
+#member > article > footer {
+    cursor: pointer;
+    padding: 10px;
+    border-top: 1px solid rgba(212, 212, 212, 0.1);
+}
+#member > article > footer:hover {
+    background-color: rgb(60, 0, 19);
+}
+
+#member > article > main > div > input {
+    background-color: rgb(60, 0, 19);
+    border: none;
+    border-radius: none;
+    box-sizing: border-box;
+    color: rgb(212, 212, 212);
+    font-size: 13pt;
+    font-family: inherit;
+    outline: 1px solid rgb(86, 0, 27);
+    outline-offset: 0;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+    z-index: 4110;
+}
+#member > article > main > div > input:focus {
+    outline: 2px solid rgb(138, 0, 43);
+    z-index: 4120;
+}
