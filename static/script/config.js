@@ -1,8 +1,8 @@
 const config = {
-    contents: {
-        text: {
-            cacheLength: 2 * 1024 * 1024 / 4,
-            pageLength: 8 * 1024
-        }
-    }
-}
+  contents: {
+    text: {
+      cacheLength: 4 * 1024 * 1024,
+      pageLength: 8 * 1024,
+    },
+  },
+};

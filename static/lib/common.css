@@ -1,107 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&Noto+Sans+JP&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&Noto+Sans+JP&display=swap");
 
-html, body {
-    background-color: rgb(30, 30, 30);
-    color: rgb(212, 212, 212);
-    font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
-    height: 100vh;
-    margin : 0;
-    overflow: hidden;
-    padding: 0;
-    width: 100vw;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: none;
+html,
+body {
+  background-color: rgb(73, 0, 23);
+  color: rgb(212, 212, 212);
+  font-family: "Noto Sans KR", "Noto Sans JP", sans-serif;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: none;
 }
 
 #webapp-guide {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: auto;
-    box-sizing: border-box;
-    padding: 0 20px;
-    background-color: rgb(73, 0, 23);
-    z-index: 9000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: rgb(73, 0, 23);
+  z-index: 9000;
 }
 
 #webapp-guide > div {
-    width: 100%;
+  width: 100%;
 }
 
 #webapp-guide > div p {
-    width: 100%;
+  width: 100%;
 }
 
 #webapp-guide > div p.center {
-    text-align: center;
+  text-align: center;
 }
 
 #webapp-guide > div img {
-    box-sizing: border-box;
-    max-width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 #wrapper {
-    box-sizing: content-box;
-    height: 100vh;
-    max-width: 768px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    width: 100vw;
-    -webkit-user-select: none;    /* Safari */
-    -webkit-touch-callout: none;  /* iOS Safari */
-    -khtml-user-select: none;     /* Konqueror HTML */
-    -ms-user-select: none;        /* Internet Explorer/Edge */
-    -moz-user-select: none;       /* Old versions of Firefox */
-    user-select: none;           /* Non-prefixed version*/
+  box-sizing: content-box;
+  height: 100vh;
+  height: 100dvh;
+  max-width: 768px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  -webkit-user-select: none; /* Safari */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  -moz-user-select: none; /* Old versions of Firefox */
+  user-select: none; /* Non-prefixed version*/
 }
 
 section {
-    background-color: rgb(73, 0, 23);
-    height: 100%;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  background-color: rgb(73, 0, 23);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 #login {
-    z-index: 3000;
+  z-index: 3000;
 }
 
 #member {
-    z-index: 4000;
+  z-index: 4000;
 }
 
 #list {
-    z-index: 2000;
+  z-index: 2000;
 }
 
 #recent {
-    z-index: 2500;
+  z-index: 2500;
 }
 
 #contents {
-    z-index: 1000;
+  z-index: 1000;
 }
 
 header > div.title-box {
-    display: inline-block;
-    height: 100%;
+  display: inline-block;
+  height: 100%;
 }
 
 header > div.title-box > div.title {
-    display: flex;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 header > div.title-box > div.title > span {
-    font-size: 14pt;
-    font-weight: bold;
+  font-size: 14pt;
+  font-weight: bold;
 }

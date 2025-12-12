@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="theme-color" content="rgb(73, 0, 23)">
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no" />
         <link rel="manifest" href="manifest.webmanifest" />
         <link rel="shortcut icon" href="/static/icon/faviconv2c.ico" />
@@ -218,6 +219,9 @@
                     </div>
                 </header>
                 <main class="scrollable">
+                    <div class="search-box">
+                        <input type="text" placeholder="파일명 검색..." oninput="listSearch(this.value)" />
+                    </div>
                     <table>
                         <tbody></tbody>
                     </table>
@@ -324,7 +328,8 @@
                             </div>
                             <div class="center">
                             </div>
-                            <div class="right">
+                            <div class="right"  onclick="contentsDownload()">
+                                <img src="/static/icon/svg/download_white_24dp.svg" />
                             </div>
                         </header>
                         <div class="title">
@@ -357,6 +362,7 @@
             </section>
         </div>
         <script src="/static/script/axios.js"></script>
+        <script src="/static/script/hangul.js"></script>
         <script src="/static/script/platform.js"></script>
         <script src="/static/script/config.js"></script>
         <script src="/static/script/common.js"></script>
@@ -367,6 +373,7 @@
         <script src="/static/script/contents.js"></script>
         <script src="/static/script/contents-text.js"></script>
         <script src="/static/script/contents-image.js"></script>
+        <script src="/static/script/contents-download.js"></script>
         <script src="/static/script/mobile.js"></script>
         <script src="/static/script/fetch.js"></script>
     </body>
