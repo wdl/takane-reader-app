@@ -1,4 +1,4 @@
-const CACHE_NAME = "takane-reader-cache-v4";
+const CACHE_NAME = "takane-reader-cache-v5";
 const API_CACHE_NAME = "takane-api-cache-v1";
 const urlsToCache = [
   "/",

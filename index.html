@@ -166,15 +166,16 @@
                     </header>
                     <main>
                         <div>
-                            <input type="email" name="email" placeholder="이메일" onkeypress="memberRegisterEmailEnter(event)" autocomplete="off" />
+                            <input type="email" name="email" placeholder="이메일" onkeypress="memberInputEnter(event, memberRegisterTry)" autocomplete="off" />
                         </div>
                         <div>
-                            <input type="password" name="secret" placeholder="비밀번호" onkeypress="memberRegisterSecretEnter(event)" autocomplete="off" />
+                            <input type="password" name="secret" placeholder="비밀번호" onkeypress="memberInputEnter(event, memberRegisterTry)" autocomplete="off" />
                         </div>
+                        <p>가입하면 계정 복구 코드가 발급됩니다. 비밀번호를 잊었을 때 필요하니 꼭 저장해두세요.</p>
                     </main>
                     <footer onclick="memberRegisterTry()">등록</footer>
                 </article>
-                <article class="reminder" class="display-none">
+                <article class="reminder">
                     <header>
                         <div class="left"></div>
                         <div class="center">계정찾기</div>
@@ -183,13 +184,21 @@
                         </div>
                     </header>
                     <main>
+                        <p>가입할 때 받은 복구 코드로 비밀번호를 다시 설정합니다.</p>
                         <div>
-                            <input type="email" name="email" placeholder="이메일" onkeypress="memberReminderEmailEnter(event)" autocomplete="off" />
+                            <input type="email" name="email" placeholder="이메일" onkeypress="memberInputEnter(event, memberReminderTry)" autocomplete="off" />
                         </div>
+                        <div>
+                            <input type="text" name="recovery_code" placeholder="복구 코드 (XXXX-XXXX-XXXX-XXXX)" onkeypress="memberInputEnter(event, memberReminderTry)" autocomplete="off" autocapitalize="characters" spellcheck="false" />
+                        </div>
+                        <div>
+                            <input type="password" name="new_secret" placeholder="새로운 비밀번호" onkeypress="memberInputEnter(event, memberReminderTry)" autocomplete="off" />
+                        </div>
+                        <p>복구 코드를 잃어버렸다면 관리자에게 문의해주세요.</p>
                     </main>
-                    <footer onclick="memberReminderTry()">찾기</footer>
+                    <footer onclick="memberReminderTry()">비밀번호 재설정</footer>
                 </article>
-                <article class="reauthor" class="display-none">
+                <article class="reauthor">
                     <header>
                         <div class="left"></div>
                         <div class="center">비밀번호 수정</div>
@@ -199,10 +208,64 @@
                     </header>
                     <main>
                         <div>
-                            <input type="password" name="secret" placeholder="새로운 비밀번호" onkeypress="memberReauthorSecretEnter(event)" autocomplete="off" />
+                            <input type="password" name="secret" placeholder="현재 비밀번호" onkeypress="memberInputEnter(event, memberReauthorTry)" autocomplete="off" />
                         </div>
+                        <div>
+                            <input type="password" name="new_secret" placeholder="새로운 비밀번호" onkeypress="memberInputEnter(event, memberReauthorTry)" autocomplete="off" />
+                        </div>
+                        <p>비밀번호를 바꾸면 다른 기기에서는 모두 로그아웃됩니다.</p>
                     </main>
                     <footer onclick="memberReauthorTry()">수정</footer>
+                </article>
+                <article class="recovery-issue">
+                    <header>
+                        <div class="left"></div>
+                        <div class="center">복구 코드 발급</div>
+                        <div class="right" onclick="memberFormClose()">
+                            <img src="/static/icon/svg/close_white_24dp.svg" />
+                        </div>
+                    </header>
+                    <main>
+                        <p class="notice display-none">아직 복구 코드가 없습니다. 비밀번호를 잊었을 때 계정을 되찾으려면 복구 코드가 필요합니다.</p>
+                        <p>현재 비밀번호를 입력하면 새 복구 코드를 발급합니다. 이전 복구 코드는 더 이상 쓸 수 없습니다.</p>
+                        <div>
+                            <input type="password" name="secret" placeholder="현재 비밀번호" onkeypress="memberInputEnter(event, memberRecoveryIssueTry)" autocomplete="off" />
+                        </div>
+                    </main>
+                    <footer onclick="memberRecoveryIssueTry()">발급</footer>
+                </article>
+                <article class="recovery-code">
+                    <header>
+                        <div class="left"></div>
+                        <div class="center">복구 코드</div>
+                        <div class="right" onclick="memberRecoveryCodeDone()">
+                            <img src="/static/icon/svg/close_white_24dp.svg" />
+                        </div>
+                    </header>
+                    <main>
+                        <p class="result"></p>
+                        <div class="recovery-code-box" onclick="memberRecoveryCodeCopy()">
+                            <code></code>
+                            <span>눌러서 복사</span>
+                        </div>
+                        <p>비밀번호를 잊었을 때 이 코드로 계정을 되찾을 수 있습니다. 다시 볼 수 없으니 안전한 곳에 저장해주세요.</p>
+                    </main>
+                    <footer onclick="memberRecoveryCodeDone()">저장했어요</footer>
+                </article>
+                <article class="security-log">
+                    <header>
+                        <div class="left"></div>
+                        <div class="center">보안 기록</div>
+                        <div class="right" onclick="memberFormClose()">
+                            <img src="/static/icon/svg/close_white_24dp.svg" />
+                        </div>
+                    </header>
+                    <main>
+                        <p>최근 20건의 계정 활동입니다. 모르는 기록이 있다면 비밀번호를 바꿔주세요.</p>
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                    </main>
                 </article>
             </section>
             <section id="list" class="">
@@ -250,6 +313,14 @@
                         <li onclick="memberFormOpen('reauthor')">
                             <div class="logo"><img src="/static/icon/svg/manage_accounts_white_24dp.svg" /></div>
                             <div class="desc">계정 정보 수정</div>
+                        </li>
+                        <li onclick="memberRecoveryIssueOpen()">
+                            <div class="logo"><img src="/static/icon/svg/sync_white_24dp.svg" /></div>
+                            <div class="desc">복구 코드 재발급</div>
+                        </li>
+                        <li onclick="memberSecurityLogOpen()">
+                            <div class="logo"><img src="/static/icon/svg/toc_white_24dp.svg" /></div>
+                            <div class="desc">보안 기록</div>
                         </li>
                         <li onclick="uploadOpen(event)">
                             <div class="logo"><img src="/static/icon/svg/file_upload_white_24dp.svg" /></div>

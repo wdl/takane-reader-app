@@ -24,6 +24,8 @@ async function listPageLoad() {
 
     const spanShowEmailHere = document.querySelector("span.show-email-here");
     spanShowEmailHere.innerText = await getSetting("email");
+
+    memberRecoveryCheck();
   } catch (e) {
     if (e.message === "Unauthorized") {
     } else {

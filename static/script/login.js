@@ -84,13 +84,14 @@ async function loginTry() {
     // If save is true, token is valid for 28d, otherwise 6h
     setCookie("token", res.data.token, save ? 28 : 0.25);
 
+    // A different account may sign in without a reload
+    memberRecoveryChecked = false;
+
     loadState("list");
   } catch (e) {
     console.log(e);
     if (e.response?.status === 401) {
       alert("이메일 또는 비밀번호가 잘못되었습니다.");
-    } else if (e.response?.status === 403) {
-      alert("이메일 인증을 먼저 진행해주세요.");
     } else {
       console.error(e);
     }

@@ -11,7 +11,7 @@
 }
 
 #member > article {
-    width: fit-content;
+    width: min(340px, calc(100% - 32px));
     height: fit-content;
     border: 2px solid rgb(60, 0, 19);
     background-color: rgb(73, 0, 23);
@@ -87,4 +87,58 @@
 #member > article > main > div > input:focus {
     outline: 2px solid rgb(138, 0, 43);
     z-index: 4120;
+}
+#member > article > main > p {
+    margin: 10px 0;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    text-align: left;
+    white-space: pre-line;
+    word-break: keep-all;
+    opacity: 0.8;
+}
+#member > article > main > p.notice,
+#member > article > main > p.result {
+    opacity: 1;
+}
+#member > article > main > p.notice {
+    color: rgb(255, 183, 77);
+}
+
+#member > article > main > .recovery-code-box {
+    margin: 10px 0;
+    padding: 14px 10px;
+    background-color: rgb(60, 0, 19);
+    outline: 1px solid rgb(86, 0, 27);
+    cursor: pointer;
+}
+#member > article > main > .recovery-code-box > code {
+    display: block;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 14pt;
+    letter-spacing: 1px;
+    -webkit-user-select: all;
+    user-select: all;
+}
+#member > article > main > .recovery-code-box > span {
+    display: block;
+    margin-top: 6px;
+    font-size: 9pt;
+    opacity: 0.6;
+}
+
+#member > article.security-log > main {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+#member > article.security-log table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    text-align: left;
+}
+#member > article.security-log td {
+    padding: 6px 4px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.1);
+    vertical-align: top;
 }
